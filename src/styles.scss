@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* baloo-2-regular - devanagari_latin_latin-ext */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/Fonts/baloo-2-v21-devanagari_latin_latin-ext-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* baloo-2-500 - devanagari_latin_latin-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/Fonts/baloo-2-v21-devanagari_latin_latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* baloo-2-600 - devanagari_latin_latin-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/Fonts/baloo-2-v21-devanagari_latin_latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* baloo-2-700 - devanagari_latin_latin-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/Fonts/baloo-2-v21-devanagari_latin_latin-ext-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* baloo-2-800 - devanagari_latin_latin-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./assets/Fonts/baloo-2-v21-devanagari_latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  .fontBaloo {
+    font-family: 'Baloo 2';
+  }
