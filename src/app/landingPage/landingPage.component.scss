@@ -1,9 +1,17 @@
+.hello {
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
-    color: rgb(72, 0, 255);
-    font-family: 'Baloo 2';
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 40px;
 }
 
 section {
-    height: 100vh;
+    height: 60vh;
     width: 100vw;
 }
