@@ -1,11 +1,16 @@
 $primary-color: #FF5959;
 
+.logo {
+    z-index: 1;
+}
+
 section {
     margin-top: 24px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 50px;
 }
 
 .links {

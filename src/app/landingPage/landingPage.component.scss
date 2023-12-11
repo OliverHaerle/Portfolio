@@ -1,6 +1,12 @@
+$starting-color-dot: #FF5959;
+$ending-color-dot: #DE0000;
+
+$ending-color-page: #FFEAEA;
+
 .hello {
     display: flex;
     flex-direction: column;
+    height: 50%;
 }
 
 h1 {
@@ -11,7 +17,80 @@ h2 {
     font-size: 40px;
 }
 
+.dot-container {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    height: 100vh;
+    // background-color: rgba(0, 0, 255, 0.059);
+}
+
+.big-red-dot {
+    height: 900px;
+    width: 900px;
+    border-radius: 100%;
+    background: linear-gradient(135deg, $starting-color-dot, $ending-color-dot);
+}
+
+.profile-pic-container {
+    height: 100%;
+    width: 50%;
+    // background: rgba(0, 0, 255, 0.521);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.profile-pic {
+    height: 85%;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.51);
+}
+
 section {
-    height: 60vh;
+    height: calc(100vh - 110px);
     width: 100vw;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(white, $ending-color-page);
+}
+
+.right-side {
+    width: 50%;
+}
+
+.scroll-and-icons {
+    display: flex;
+    height: 100%;
+}
+
+.scroll {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-text {
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.red-line {
+    width: 1px;
+    height: 100%;
+    background-color: #FF5959;
+}
+
+.icon {
+    height: 60px / 2;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
