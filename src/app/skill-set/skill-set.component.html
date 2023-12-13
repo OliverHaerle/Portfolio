@@ -1,0 +1,21 @@
+<section>
+
+    <h1 class="fontBaloo">
+        Skill set
+    </h1>
+
+    <div class="skill-icons">
+        
+        
+        <div id="skill-set-container">
+            <div *ngFor="let icon of skillIcons; let i = index" class="skill-item">
+                <img [src]="icon" alt="{{ description[i] }}">
+                <p>{{ description[i] }}</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</section>
