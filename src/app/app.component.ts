@@ -7,13 +7,17 @@ import { AboutMeComponent } from "./about-me/about-me.component";
 import { SkillSetComponent } from './skill-set/skill-set.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { PokedexComponent } from './pokedex/pokedex.component';
+import { JoinComponent } from './join/join.component';
+import { PolloLocoComponent } from './pollo-loco/pollo-loco.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, LandingPageComponent, NavbarComponent, AboutMeComponent, SkillSetComponent, MyWorkComponent, PokedexComponent]
+    imports: [CommonModule, RouterOutlet, LandingPageComponent, NavbarComponent, AboutMeComponent, SkillSetComponent, MyWorkComponent, PokedexComponent, JoinComponent, PolloLocoComponent, FooterComponent, ContactComponent]
 })
 export class AppComponent {
   title = 'Portfolio';
