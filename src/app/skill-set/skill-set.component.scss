@@ -6,7 +6,9 @@ section {
     height: 61vh;
     background: linear-gradient(170deg, $primary-color, 60%, #DE0000);
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
 }
 
 h1 {
@@ -15,4 +17,29 @@ h1 {
     line-height: 96px;
     letter-spacing: 0.01em;
     color: white;
+    margin-bottom: 32px;
+}
+
+.skill-set-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 100%;
+    gap: 52px;
+}
+
+.img-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    p {
+        color: white;
+    }
+
+    img {
+        height: 60px;
+    }
 }

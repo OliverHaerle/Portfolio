@@ -11,22 +11,20 @@ import { CommonModule } from '@angular/common';
 })
 export class SkillSetComponent {
 
-  constructor() {
-    console.log('bibi')
-  }
+  // constructor() {}
 
   skillIcons = [
-    'skill-icon1',
-    'skill-icon2',
-    'skill-icon3',
-    'skill-icon4',
-    'skill-icon5',
-    'skill-icon6',
-    'skill-icon7',
-    'skill-icon8',
-    'skill-icon9',
-    'skill-icon10'
-  ]
+    'skill-icon1.svg',
+    'skill-icon2.svg',
+    'skill-icon3.svg',
+    'skill-icon4.svg',
+    'skill-icon5.svg',
+    'skill-icon6.svg',
+    'skill-icon7.svg',
+    'skill-icon8.svg',
+    'skill-icon9.svg',
+    'skill-icon10.svg',
+  ];
 
   description = [
     'Angular',
@@ -38,7 +36,7 @@ export class SkillSetComponent {
     'GIT',
     'CSS',
     'Test-Api',
-    'Material design'
-  ]
+    'Material design',
+  ];
 }
 
