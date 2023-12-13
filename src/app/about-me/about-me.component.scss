@@ -25,71 +25,27 @@ h1 {
     gap: 16px;
 }
 
-// button {
-//     font-size: 28px;
-//     padding: 24px;
-//     padding: 15px, 30px, 15px, 30px;
-//     border-radius: 10px;
-//     border: 2px solid $primary-color;
-//     color: $primary-color;
-//     gap: 10px;
-//     background: white; 
-// }
-
-
-
-
-/* CSS */
 button {
-  appearance: none;
-  background-color: #FFFFFF;
-  border: 2px solid $primary-color;
-  color: $primary-color;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 20px;
-  padding: 15px 30px;
-  position: relative;
-  text-decoration: none;
-  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
+    font-size: 28px;
+    padding: 24px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    gap: 10px;
+    background: white;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px 0px #00000026;
+
+
+    &:hover {
+      content: "";
+      background-color: $primary-color;
+      transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+      color: white;
+    }
 }
 
-button:before {
-  animation: opacityFallbackOut .5s step-end forwards;
-  backface-visibility: hidden;
-  background-color: $primary-color;
-  clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transform: translateZ(0);
-  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
-  width: 100%;
-}
+$primary-color: #FF5959; // Define primary color
 
-button:hover:before {
-  animation: opacityFallbackIn 0s step-start forwards;
-  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-}
-
-button:after {
-  background-color: #FFFFFF;
-}
-
-button span {
-  z-index: 1;
-  position: relative;
-}
-
-button:hover span {
-    z-index: 1;
-    position: relative;
-    color: white;
-  }
