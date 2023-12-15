@@ -21,6 +21,10 @@ h1 {
 }
 
 .skill-set-container {
+    height: 140px;
+}
+
+.icon-container {
     display: flex;
     justify-content: center;
     width: 60vw;
@@ -49,5 +53,11 @@ h1 {
 
     img {
         height: 60px;
+    }
+}
+
+@media (max-height: 900px) {
+    section {
+        height: 73vh;
     }
 }

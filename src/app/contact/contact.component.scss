@@ -1,0 +1,96 @@
+$primary-color: #FF5959;
+
+h1 {
+    color: $primary-color;
+    font-size: 70px;
+    margin-bottom: 5vh;
+}
+
+section {
+    display: flex;
+    background: linear-gradient(white, #FFEAEA);
+    height: 60vh;
+}
+
+.left-side {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    input,
+    textarea {
+        width: 80%;
+        border: 1px solid $primary-color;
+        border-radius: 8px;
+
+        &:hover {
+            border: 2px solid $primary-color;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid $primary-color;
+            /* Set border style for active state */
+        }
+    }
+
+    textarea {
+        display: flex;
+        height: 202px;
+        padding: 15px 25px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    input {
+        display: flex;
+        height: 50px;
+        padding: 15px 25px;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 30px;
+        border-radius: 10px;
+        border: 2px solid #BBB;
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+        background-color: transparent;
+        color: #BBB;
+        font-size: 23px;
+        font-weight: 400;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.check {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    a {
+        color: $primary-color;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}

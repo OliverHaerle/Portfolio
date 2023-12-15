@@ -74,6 +74,8 @@ section {
 }
 
 .scroll-text {
+    font-size: 23px;
+    font-weight: 500;
     margin-top: 48px;
     margin-bottom: 24px;
 }
@@ -84,12 +86,24 @@ section {
     background-color: $primary-color;
 }
 
-.icon {
-    height: 60px / 2;
-}
-
-.icons{
+.icons {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
+    margin-top: 13vh;
+
+    div {
+        width: 60px;
+        height: 40px;
+        transition: all 100ms ease-in-out;
+
+        &:hover {
+            transform: translate(-20px, 0);
+            cursor: pointer;
+        }
+    }
+
+    img {
+        height: 40px;
+    }
 }

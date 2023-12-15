@@ -1,1 +1,29 @@
-<p>contact works!</p>
+<!-- <script src="script.js"></script> -->
+
+<h1 class="fontBaloo"> Contact </h1>
+
+<section class="fontMontserrat">
+    <div class="left-side">
+        <h2> Got a problem to solve? </h2>
+        <p> Contact me through this form. I am interested in hearing from you. </p>
+        <p> Need a Frontend developer? <b> Contact me </b></p>
+    </div>
+    <div class="right-side fontMontserrat">
+
+
+        <form onsubmit="sendMail(event)" method="POST">
+            <label>
+                Your email:
+                <input type="email" name="email">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+        </form>
+
+
+    </div>
+</section>

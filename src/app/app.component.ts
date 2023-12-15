@@ -11,6 +11,7 @@ import { JoinComponent } from './join/join.component';
 import { PolloLocoComponent } from './pollo-loco/pollo-loco.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-root',
