@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() { }
 
-  sendMail(event){
+  sendMail(event: { preventDefault: () => void; target: HTMLFormElement | undefined; }){
     event.preventDefault();
     const data = new FormData(event.target);
 
