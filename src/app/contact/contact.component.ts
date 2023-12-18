@@ -1,41 +1,49 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, NgModule, OnInit } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgForm],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
-  name!: string;
-  email!: string;
-  message!: string;
-
-  @ViewChild('myForm') myForm: any;
 
 
   constructor() { }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
-  ngOnInit() { }
-
-  sendMail(event: { preventDefault: () => void; target: HTMLFormElement | undefined; }){
-    event.preventDefault();
-    const data = new FormData(event.target);
-
-    fetch("YOUR_URL", {
-        method: "POST",
-        body: new FormData(event.target),
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(() => {
-        window.location.href = "./send_mail.html";
-    }).catch((error) => {
-        console.log(error);
-    });
+  onSubmit(formData: any): void {
+    // This function will be called when the form is submitted
+    // You can access form data here and perform necessary actions
+    console.log('Form submitted:', formData);
+    // You can implement the logic to send the form data to your server or perform other actions.
+  }
 }
 
-}
+
+
+
+// import { Component } from '@angular/core';
+// // import { FormsModule } from '@angular/forms';
+
+// @Component({
+//   selector: 'app-contact',
+//   templateUrl: './contact.component.html',
+//   styleUrls: ['./contact.component.scss']
+// })
+// export class ContactComponent {
+
+//   constructor() { }
+
+//   onSubmit(formData: any): void {
+//     // This function will be called when the form is submitted
+//     // You can access form data here and perform necessary actions
+//     console.log('Form submitted:', formData);
+//     // You can implement the logic to send the form data to your server or perform other actions.
+//   }
+// }
