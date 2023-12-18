@@ -17,11 +17,8 @@ h2 {
 }
 
 .dot-container {
-    position: absolute;
-    top: -200px;
-    left: -200px;
+
     height: 100vh;
-    // background-color: rgba(0, 0, 255, 0.059);
 }
 
 .big-red-dot {
@@ -29,6 +26,9 @@ h2 {
     width: 900px;
     border-radius: 100%;
     background: linear-gradient(180deg, $primary-color, 50%, $ending-color-dot);
+    position: absolute;
+    top: -200px;
+    left: -200px;
 }
 
 .profile-pic-container {
@@ -105,5 +105,29 @@ section {
 
     img {
         height: 40px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .big-red-dot {
+        height: 800px;
+        width: 800px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .big-red-dot {
+        left: -250px;
+    }
+
+    .hello {
+        padding-left: 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .big-red-dot {
+        height: 700px;
+        width: 700px;
     }
 }

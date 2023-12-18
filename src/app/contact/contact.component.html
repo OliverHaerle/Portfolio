@@ -11,7 +11,7 @@
     <div class="right-side fontMontserrat">
 
 
-        <form onsubmit="sendMail(event)" method="POST">
+        <form (ngSubmit)="sendMail($event)" method="POST">
             <label>
                 Your email:
                 <input type="email" name="email">
