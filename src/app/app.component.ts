@@ -14,10 +14,6 @@ import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 
 
-@NgModule ({
-
-})
-
 @Component({
     selector: 'app-root',
     standalone: true,
