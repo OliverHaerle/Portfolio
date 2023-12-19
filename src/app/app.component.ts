@@ -12,14 +12,29 @@ import { PolloLocoComponent } from './pollo-loco/pollo-loco.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, LandingPageComponent, NavbarComponent, AboutMeComponent, SkillSetComponent, MyWorkComponent, PokedexComponent, JoinComponent, PolloLocoComponent, FooterComponent, FormsModule, ContactComponent]
+  selector: 'app-root',
+  standalone: true,
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
+  imports: [CommonModule,
+    RouterOutlet,
+    LandingPageComponent,
+    NavbarComponent,
+    AboutMeComponent,
+    SkillSetComponent,
+    MyWorkComponent,
+    PokedexComponent,
+    JoinComponent,
+    PolloLocoComponent,
+    FooterComponent,
+    FormsModule,
+    ContactComponent,
+    HttpClientModule]
 })
 
 export class AppComponent {

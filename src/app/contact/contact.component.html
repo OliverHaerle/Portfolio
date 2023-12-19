@@ -7,17 +7,15 @@
         <p> Need a Frontend developer? <b> Contact me </b></p>
     </div>
     <div class="right-side fontMontserrat">
-        <form (ngSubmit)="onSubmit()">
-            <input type="text" name="name" ngModel required>
-            <input type="email" name="email" ngModel required>
+        <form action="" (submit)="onSubmit()">
+            <input type="text" name="name" [(ngModel)]="contact.name">
+            <input type="email" name="email" [(ngModel)]="contact.email">
+            <textarea type="text" name="message" [(ngModel)]="contact.message"></textarea>
             <button type="submit">Send</button>
-       </form>
+        </form>
     </div>
 </section>
 
+<!-- <div style="overflow:scroll; height:400px; background-color: lightblue;" [innerHTML]="htmlContent"></div> -->
 
-<form action="https://formsubmit.co/Oliver.haerle@outlook.com" method="POST">
-    <input type="text" name="name" required>
-    <input type="email" name="email" required>
-    <button type="submit">Send</button>
-</form>
+<iframe [srcdoc]="htmlContent"></iframe>

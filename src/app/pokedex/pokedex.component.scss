@@ -27,42 +27,48 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    h2 {
+        color: $primary-color;
+        font-size: 45px;
+    }
+
+    h3 {
+        color: $primary-color;
+        font-size: 23px;
+    }
+
+    p {
+        margin-top: 16px;
+    }
 }
 
-h2 {
-    color: $primary-color;
-    font-size: 45px;
-}
 
-h3 {
-    color: $primary-color;
-    font-size: 23px;
-}
+.button-container {
+    display: flex;
+    gap: 32px;
 
-p {
-    margin-top: 16px;
-}
-
-button {
-    margin-top: 24px;
-    width: 200px;
-    font-size: 28px;
-    padding: 24px;
-    padding: 15px 30px;
-    border-radius: 10px;
-    border: 2px solid $primary-color;
-    color: $primary-color;
-    gap: 10px;
-    background: white;
-    cursor: pointer;
-    overflow: hidden;
-    box-shadow: 5px 5px 15px 0px #00000026;
+    button {
+        margin-top: 24px;
+        width: 200px;
+        font-size: 28px;
+        padding: 24px;
+        padding: 15px 30px;
+        border-radius: 10px;
+        border: 2px solid $primary-color;
+        color: $primary-color;
+        gap: 10px;
+        background: white;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: 5px 5px 15px 0px #00000026;
 
 
-    &:hover {
-      content: "";
-      background-color: $primary-color;
-      transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-      color: white;
+        &:hover {
+            content: "";
+            background-color: $primary-color;
+            transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+            color: white;
+        }
     }
 }

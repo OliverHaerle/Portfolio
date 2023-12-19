@@ -1,12 +1,14 @@
 $primary-color: #FF5959;
 
 h1 {
+    margin: 0 0 0 10%;
     color: $primary-color;
     font-size: 70px;
     margin-bottom: 5vh;
 }
 
 section {
+    padding: 0 0 0 10%;
     display: flex;
     background: linear-gradient(white, #FFEAEA);
     height: 60vh;
@@ -16,6 +18,11 @@ section {
     width: 40%;
     display: flex;
     flex-direction: column;
+
+    img {
+        height: 30px;
+        width: 30px;
+    }
 }
 
 .right-side {
