@@ -10,6 +10,7 @@ section {
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 img {
@@ -113,12 +114,13 @@ p {
     section {
         flex-direction: column;
         align-items: center;
-        height: 80vh;
+        height: 70vh;
+        margin-top: 5vh;
     }
 
     .img-container {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 5vh;
 
         img {
             height: 450px;
@@ -131,5 +133,38 @@ p {
 
     .description {
         align-items: center;
+        width: 100%;
+
+        p {
+            padding: 0 24px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .img-container {
+
+
+        img {
+            width: 90%;
+            height: fit-content;
+
+            &:hover {
+                transform: translate(0) scale(1, 1);
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .description { 
+        h3 {
+            font-size: 20px;
+        }
+        button {
+            width: 130px;
+            font-size: 16px;
+        }
     }
 }
