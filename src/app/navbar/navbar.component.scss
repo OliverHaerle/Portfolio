@@ -65,6 +65,7 @@ a {
     .burger {
         display: flex;
         margin-right: 32px;
+        z-index: 15;
 
         &:hover {
             cursor: pointer;
