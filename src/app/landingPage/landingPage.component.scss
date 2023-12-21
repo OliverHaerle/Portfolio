@@ -47,7 +47,7 @@ h2 {
 }
 
 section {
-    height: 100vh;
+    height: calc(100vh - 69px - 24px);
     display: flex;
     flex-direction: row;
     background: linear-gradient(white, $ending-color-page);
