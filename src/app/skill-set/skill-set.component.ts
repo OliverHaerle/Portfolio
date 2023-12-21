@@ -18,6 +18,11 @@ export class SkillSetComponent {
     'skill-icon3.svg',
     'skill-icon4.svg',
     'skill-icon5.svg',
+    'skill-icon6.svg',
+    'skill-icon7.svg',
+    'skill-icon8.svg',
+    'skill-icon9.svg',
+    'skill-icon10.svg',
   ];
 
   description1 = [
@@ -26,24 +31,12 @@ export class SkillSetComponent {
     'JavaScript',
     'HTML',
     'Scrum',
-
-  ];
-
-  skillicons2 = [
-    'skill-icon6.svg',
-    'skill-icon7.svg',
-    'skill-icon8.svg',
-    'skill-icon9.svg',
-    'skill-icon10.svg',
-  ];
-
-  description2 = [
     'Firebase',
     'GIT',
     'CSS',
     'Test-Api',
     'Material design',
-  ]
 
+  ];
 }
 

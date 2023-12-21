@@ -8,23 +8,12 @@
 
     <div class="skill-set-container">
 
-        <div class="icon-container">
-            @for (source of skillIcons1; track source; let idx = $index) {
-            <div class="img-description">
-                <img src="../../assets/img/skill-icons/{{source}}">
-                <p class="fontMontserrat"> {{ description1[idx] }} </p>
-            </div>
-            }
+        @for (source of skillIcons1; track source; let idx = $index) {
+        <div class="img-description">
+            <img src="../../assets/img/skill-icons/{{source}}">
+            <p class="fontMontserrat"> {{ description1[idx] }} </p>
         </div>
-
-        <div class="icon-container">
-            @for (source of skillicons2; track source; let idx = $index) {
-            <div class="img-description">
-                <img src="../../assets/img/skill-icons/{{source}}">
-                <p class="fontMontserrat"> {{ description2[idx] }} </p>
-            </div>
-            }
-        </div>
+        }
 
     </div>
 

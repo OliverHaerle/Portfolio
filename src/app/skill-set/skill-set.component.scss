@@ -3,7 +3,7 @@ $primary-color: #FF5959;
 
 section {
     // width: 100vw;
-    height: 61vh;
+    // height: 61vh;
     background: linear-gradient(160deg, $primary-color, 70%, #DE0000);
     display: flex;
     align-items: center;
@@ -21,10 +21,7 @@ h1 {
 }
 
 .skill-set-container {
-    height: 140px;
-}
-
-.icon-container {
+    max-width: 1300px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -37,10 +34,11 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 120px;
+    width: calc(20% - 100px);
     gap: 16px;
-    transition: transform 0.3s ease; /* Added transition for smoother effect */
-    
+    transition: transform 0.3s ease;
+    /* Added transition for smoother effect */
+
     &:hover {
         transform: translate(0, -20px);
         font-weight: bold;
@@ -57,8 +55,12 @@ h1 {
     }
 }
 
-@media (max-height: 900px) {
+@media (max-width: 900px) {
     section {
-        height: 73vh;
+        height: auto;
+    }
+
+    .img-description {
+        width: 100px !important;
     }
 }

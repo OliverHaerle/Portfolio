@@ -40,6 +40,27 @@ footer {
         img {
             height: 40px;
             width: 40px;
+            transition: all 100ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.4);
+                cursor: pointer;
+            }
         }
     }
+}
+
+@media (max-width: 910px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+.center {
+    width: 100%;
+}
 }

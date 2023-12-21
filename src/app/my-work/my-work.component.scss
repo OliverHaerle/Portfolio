@@ -3,7 +3,8 @@ $ending-color-dot: #DE0000;
 
 
 section {
-    // width: 100vw;
+    display: flex;
+    align-items: center;
     height: 30vh;
 }
 

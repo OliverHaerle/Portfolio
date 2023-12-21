@@ -11,7 +11,7 @@ h1 {
     display: flex;
     align-items: center;
     color: $primary-color;
-    font-size: 70px;
+    font-size: 120px;
     margin-left: 10vw;
 }
 
@@ -20,8 +20,9 @@ h1 {
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 16px;
+    gap: 36px;
     margin-right: 10vw;
 }
 
@@ -48,7 +49,22 @@ button {
     }
 }
 
-$primary-color: #FF5959; // Define primary color
+@media(max-width: 1500px) {
+    h1 {
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 1200px) {
+    section {
+        font-size: 21px;
+    }
+
+    button {
+        font-size: 21px;
+    }
+
+}
 
 @media (max-width: 1000px) {
     section {
@@ -59,13 +75,12 @@ $primary-color: #FF5959; // Define primary color
 
         h1 {
             height: 32%;
-            // padding: 0 32px;
             margin: 0;
         }
 
         .text-and-button {
             width: 100vw;
-            height: 50%;
+            height: auto;
             text-align: center;
             display: flex;
             align-items: center;
@@ -76,5 +91,24 @@ $primary-color: #FF5959; // Define primary color
                 padding: 0 32px;
             }
         }
+    }
+}
+
+@media(max-width: 880px) {
+    section {
+        height: 70vh;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+}
+
+@media(max-width: 660px) {
+    h1 {
+        font-size: 70px;
+        line-height: 120%;
+        /* 76.8px */
+        text-align: center;
     }
 }
