@@ -1,0 +1,42 @@
+$primary-color: #FF5959;
+$ending-color-dot: #DE0000;
+
+
+section {
+    display: flex;
+    align-items: center;
+    height: 30vh;
+}
+
+.container {
+    margin: 0 0 0 10%;
+}
+
+h1 {
+    font-size: 80px;
+    color: $primary-color;
+}
+
+p {
+    font-size: 20px;
+}
+
+// .dot {
+//     position: relative;
+//     left: 500px;
+//     top: 10%;
+//     height: 80px;
+//     width: 80px;
+//     border-radius: 100%;
+//     background: linear-gradient(180deg, $primary-color, 50%, $ending-color-dot);
+// }
+
+// .dot2 {
+//     position: relative;
+//     left: 1000px;
+//     bottom: 8%;
+//     height: 200px;
+//     width: 200px;
+//     border-radius: 100%;
+//     background: linear-gradient(180deg, $primary-color, 50%, $ending-color-dot);
+// }

@@ -1,0 +1,55 @@
+<h1 class="fontBaloo"> Contact </h1>
+
+<section class="fontMontserrat">
+    <div class="left-side">
+        <h2> Got a problem to solve? </h2>
+        <p> Contact me through this form. I am interested in hearing from you. </p>
+        <p> Need a Frontend developer? <b> Contact me </b></p>
+    </div>
+
+    <form>
+        
+        <div class="name-container">
+            <input placeholder="Your name" type="text" name="name" ngModel required #nameField>
+
+            <!-- @if(nameField.errors?.['required'] && nameField.touched) {
+            <p> Field can't be empty </p>
+            } -->
+
+        </div>
+
+        <div class="email-container">
+            <input placeholder="Your email" type="email" name="email" ngModel required email #emailField>
+
+            <!-- @if(emailField.errors?.['required'] && emailField.touched) {
+            <p> Field can't be empty </p>
+            }
+
+            @if(emailField.errors?.['email'] && emailField.touched) {
+            <p>Please enter a valid email </p>
+            } -->
+        </div>
+
+        <div class="message-container">
+            <textarea placeholder="Your message" type="text" name="message" ngModel required
+                #messageField></textarea>
+<!-- 
+            @if(messageField.errors?.['required'] && messageField.touched) {
+            <p> Field can't be empty </p>
+            } -->
+        </div>
+
+    </form>
+
+</section>
+
+<!-- <form action="" (submit)="onSubmit()">
+            <input type="text" name="name" [(ngModel)]="contact.name">
+            <input type="email" name="email" [(ngModel)]="contact.email">
+            <textarea type="text" name="message" [(ngModel)]="contact.message"></textarea>
+            <button type="submit">Send</button>
+        </form> -->
+
+<!-- <div style="overflow:scroll; height:400px; background-color: lightblue;" [innerHTML]="htmlContent"></div> -->
+
+<!-- <iframe style="width: 100vw;" [srcdoc]="htmlContent"></iframe> -->
