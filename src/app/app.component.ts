@@ -10,7 +10,7 @@ import { PokedexComponent } from './pokedex/pokedex.component';
 import { JoinComponent } from './join/join.component';
 import { PolloLocoComponent } from './pollo-loco/pollo-loco.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -33,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     PolloLocoComponent,
     FooterComponent,
     FormsModule,
+    ReactiveFormsModule,
     ContactComponent,
     HttpClientModule,
     ]
