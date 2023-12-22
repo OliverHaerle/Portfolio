@@ -8,14 +8,13 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() {
-    this.showMenu();
-  }
 
-  ngOnInit(): void {}
+
+  constructor() { }
+
+  ngOnInit(): void { }
 
   showMenu() {
-    console.log('test');
-
+    document.getElementById('burger-menu')?.classList.toggle('d-none');
   }
 }

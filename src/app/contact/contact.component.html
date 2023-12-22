@@ -7,40 +7,49 @@
         <p> Need a Frontend developer? <b> Contact me </b></p>
     </div>
 
-    <form>
+    <form (submit)="sendMail()" #myForm>
 
         <div class="name-container">
-            <input placeholder="Your name" type="text" name="name" ngModel required #nameField>
-
-            <!-- @if(nameField.errors?.['required'] && nameField.touched) {
-            <p> Field can't be empty </p>
-            } -->
-
+            <input placeholder="Your name" type="text" name="name" [(ngModel)]="name" required #nameField>
         </div>
+
 
         <div class="email-container">
             <input placeholder="Your email" type="email" name="email" ngModel required email #emailField>
+        </div>
 
-            <!-- @if(emailField.errors?.['required'] && emailField.touched) {
+
+        <div class="message-container">
+            <textarea placeholder="Your message" type="text" name="message" ngModel required #messageField></textarea>
+        </div>
+
+        <button>Send message </button>
+    </form>
+
+</section>
+
+
+<!-- @if(nameField.errors?.['required'] && nameField.touched) {
+            <p> Field can't be empty </p>
+            } -->
+
+
+<!-- @if(emailField.errors?.['required'] && emailField.touched) {
             <p> Field can't be empty </p>
             }
 
             @if(emailField.errors?.['email'] && emailField.touched) {
             <p>Please enter a valid email </p>
             } -->
-        </div>
 
-        <div class="message-container">
-            <textarea placeholder="Your message" type="text" name="message" ngModel required #messageField></textarea>
-            <!-- 
+
+<!-- 
             @if(messageField.errors?.['required'] && messageField.touched) {
             <p> Field can't be empty </p>
             } -->
-        </div>
 
-    </form>
 
-</section>
+
 
 <!-- <form action="" (submit)="onSubmit()">
             <input type="text" name="name" [(ngModel)]="contact.name">

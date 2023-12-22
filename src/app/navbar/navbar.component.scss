@@ -57,6 +57,17 @@ a {
     display: none;
 }
 
+.burger-menu-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 16;
+    margin: 24px 10vw 0 10vw;
+}
+
 @media (max-width: 850px) {
     .links {
         display: none;

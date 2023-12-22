@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PokedexComponent } from './pokedex/pokedex.component';
 import { PolloLocoComponent } from './pollo-loco/pollo-loco.component';
 import { SkillsetComponent } from './skillset/skillset.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,12 @@ import { SkillsetComponent } from './skillset/skillset.component';
     NavbarComponent,
     PokedexComponent,
     PolloLocoComponent,
-    SkillsetComponent
+    SkillsetComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
