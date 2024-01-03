@@ -7,23 +7,23 @@
         <p> Need a Frontend developer? <b> Contact me </b></p>
     </div>
 
-    <form (submit)="sendMail()" #myForm>
+    <form (submit)="sendMail()" ngNativeValidate #myForm>
 
         <div class="name-container">
-            <input placeholder="Your name" type="text" name="name" [(ngModel)]="name" required #nameField>
+            <input placeholder="Your name" type="text" name="name" required #nameField>
         </div>
 
 
         <div class="email-container">
-            <input placeholder="Your email" type="email" name="email" ngModel required email #emailField>
+            <input placeholder="Your email" type="email" name="email" required #emailField>
         </div>
 
 
         <div class="message-container">
-            <textarea placeholder="Your message" type="text" name="message" ngModel required #messageField></textarea>
+            <textarea placeholder="Your message" type="text" name="message" required #messageField></textarea>
         </div>
 
-        <button>Send message </button>
+        <button #button type="submit">Send message </button>
     </form>
 
 </section>
@@ -47,17 +47,3 @@
             @if(messageField.errors?.['required'] && messageField.touched) {
             <p> Field can't be empty </p>
             } -->
-
-
-
-
-<!-- <form action="" (submit)="onSubmit()">
-            <input type="text" name="name" [(ngModel)]="contact.name">
-            <input type="email" name="email" [(ngModel)]="contact.email">
-            <textarea type="text" name="message" [(ngModel)]="contact.message"></textarea>
-            <button type="submit">Send</button>
-        </form> -->
-
-<!-- <div style="overflow:scroll; height:400px; background-color: lightblue;" [innerHTML]="htmlContent"></div> -->
-
-<!-- <iframe style="width: 100vw;" [srcdoc]="htmlContent"></iframe> -->

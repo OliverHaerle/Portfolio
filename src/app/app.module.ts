@@ -12,7 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PokedexComponent } from './pokedex/pokedex.component';
 import { PolloLocoComponent } from './pollo-loco/pollo-loco.component';
 import { SkillsetComponent } from './skillset/skillset.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

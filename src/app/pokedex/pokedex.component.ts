@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class PokedexComponent {
 
+  livelink: string = 'https://oliverhaerle.at/Projects/Pok%C3%A9dex/index.html'
 }

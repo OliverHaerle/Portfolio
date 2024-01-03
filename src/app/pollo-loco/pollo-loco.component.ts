@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./pollo-loco.component.scss']
 })
 export class PolloLocoComponent {
-
+  liveLink: string = 'https://oliverhaerle.at/Projects/ElPolloLoco/index.html'
 }
