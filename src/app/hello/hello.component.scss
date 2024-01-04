@@ -138,17 +138,32 @@ section {
 }
 
 @media (max-width: 850px) {
-    .hello {
-        color: white;
-        position: absolute;
-        left: 15%;
-    }
-
     .big-red-dot {
-        height: 710px;
+        height: 730px;
         width: 730px;
         top: -30px;
         left: -200px;
+    }
+
+    section {
+        flex-direction: column-reverse;
+    }
+
+    .hello {
+        margin-top: 16px;
+        color: rgb(255 255 255);
+        position: absolute;
+        width: 100vw;
+        display: flex;
+    }
+
+    h1 {
+        line-height: 1;
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 30px;
     }
 
     .scroll-and-icons {
@@ -163,11 +178,32 @@ section {
         width: 100vw;
         display: flex;
         justify-content: center;
+
         .profile-pic {
             height: 70%;
             width: 300px
         }
     }
+}
 
-    
+@media (max-width: 530px) {
+    .big-red-dot {
+        height: calc(100vw + 180px);
+        width: calc(100vw + 180px);
+        top: -30px;
+        left: -200px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hello {
+        padding-left: 10px;
+        margin-top: 32px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    h2{
+        font-size: 25px;
+    }
 }
