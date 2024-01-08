@@ -154,6 +154,7 @@ section {
         color: rgb(255 255 255);
         position: absolute;
         width: 100vw;
+        max-width: 100%;
         display: flex;
     }
 
@@ -176,6 +177,7 @@ section {
 
     .profile-pic-container {
         width: 100vw;
+        max-width: 100%;
         display: flex;
         justify-content: center;
 
