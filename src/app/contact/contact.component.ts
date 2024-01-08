@@ -53,8 +53,4 @@ export class ContactComponent implements OnInit {
     button.disabled = true;
   }
 
-  enableButtons() {
-
-  }
-
 }
