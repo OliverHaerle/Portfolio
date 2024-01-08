@@ -18,11 +18,13 @@
         <textarea class="message-container" placeholder="Your message" type="text" name="message" required
             #messageField></textarea>
 
-        <button #button type="submit">Send message </button>
+        <button (click)="animation()" #button type="submit">Send message </button>
     </form>
 
-    <div class="message">
+    <div #contactMessage class="message">
         <span> Thank you for your message :) </span>
     </div>
 
 </section>
+
+<!--  (submit)="sendMail();" NEEDS TO PE PUT PACK!!! -->
