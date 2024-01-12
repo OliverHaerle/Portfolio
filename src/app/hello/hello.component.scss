@@ -35,13 +35,13 @@ h2 {
 }
 
 .big-red-dot {
-    height: 900px;
-    width: 900px;
-    border-radius: 100%;
-    background: linear-gradient(180deg, $primary-color, 50%, $ending-color-dot);
+    height: 980px;
+    width: 980px;
+    border-radius: 100vw;
+    background: linear-gradient(180deg, #FF5959, 50%, #DE0000);
     position: absolute;
-    top: -200px;
-    left: -200px;
+    top: -184px;
+    left: -250px;
 }
 
 .profile-pic-container {
@@ -152,13 +152,6 @@ section {
 }
 
 @media (max-width: 850px) {
-    .big-red-dot {
-        height: 730px;
-        width: 730px;
-        top: -30px;
-        left: -200px;
-    }
-
     section {
         flex-direction: column-reverse;
     }
@@ -202,24 +195,30 @@ section {
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 500px) {
     .big-red-dot {
-        height: calc(100vw + 180px);
-        width: calc(100vw + 180px);
-        top: -30px;
-        left: -200px;
+        height: 605px;
+        width: 605px;
+        top: -51px;
+        left: -250px;
     }
 }
 
 @media (max-width: 380px) {
+    .big-red-dot {
+        height: 545px;
+        width: 545px;
+    }
     .hello {
         padding-left: 10px;
         margin-top: 32px;
     }
+
     h1 {
         font-size: 50px;
     }
-    h2{
+
+    h2 {
         font-size: 25px;
     }
 }

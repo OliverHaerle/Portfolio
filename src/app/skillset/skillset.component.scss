@@ -37,11 +37,8 @@ h1 {
     align-items: center;
     width: calc(20% - 100px);
     gap: 16px;
-    transition: transform 0.3s ease;
-    /* Added transition for smoother effect */
 
     &:hover {
-        transform: translate(0, -20px);
         font-weight: bold;
     }
 
@@ -53,6 +50,12 @@ h1 {
 
     img {
         height: 60px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translate(0, -20px);
+            font-weight: bold;
+        }
     }
 }
 

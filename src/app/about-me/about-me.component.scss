@@ -28,7 +28,7 @@ h1 {
     flex-direction: column;
     gap: 36px;
     margin-right: 10vw;
-    margin-top: 45px;
+    // margin-top: 45px;
 }
 
 button {
@@ -59,11 +59,11 @@ button {
     width: 100%;
     display: flex;
     justify-content: center;
-    top: -125px;
+    top: -9vh;
 
     div {
-        height: 206px;
-        width: 206px;
+        height: 18vh;
+        width: 18vh;
         background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
         border-radius: 100vw;
         z-index: -1;
@@ -79,8 +79,8 @@ button {
     right: 15%;
 
     div {
-        height: 82px;
-        width: 82px;
+        height: 9vh;
+        width: 9vh;
         background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
         border-radius: 100vw;
         z-index: -1;
@@ -132,7 +132,7 @@ button {
 
 @media(max-width: 880px) {
     section {
-        height: 70vh;
+        height: 80vh;
     }
 
     h1 {
@@ -150,6 +150,7 @@ button {
     .dot2 {
         right: 3vw;
         top: 3vw;
+
         div {
             height: 60px;
             width: 60px;
@@ -158,10 +159,6 @@ button {
 }
 
 @media(max-width: 530px) {
-    section {
-        height: 80vh;
-    }
-
     h1 {
         font-size: 60px;
     }
@@ -172,3 +169,16 @@ button {
         }
     }
 }
+
+// @media(max-height: 900px) {
+//     .dot1 {
+
+//         div {}
+//     }
+
+//     .dot2 {
+//         div {
+
+//         }
+//     }
+// }
