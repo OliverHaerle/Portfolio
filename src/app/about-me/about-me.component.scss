@@ -1,7 +1,9 @@
 $primary-color: #FF5959;
+$ending-color-dot: #DE0000;
 
 section {
-    height: 61vh;
+    position: relative;
+    height: 76vh;
     display: flex;
     font-size: 23px;
     position: relative;
@@ -23,10 +25,10 @@ h1 {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     gap: 36px;
     margin-right: 10vw;
+    margin-top: 45px;
 }
 
 button {
@@ -49,6 +51,39 @@ button {
         background-color: $primary-color;
         transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
         color: white;
+    }
+}
+
+.dot1 {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: -125px;
+
+    div {
+        height: 206px;
+        width: 206px;
+        background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
+        border-radius: 100vw;
+        z-index: -1;
+    }
+}
+
+.dot2 {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    top: 50px;
+    right: 15%;
+
+    div {
+        height: 82px;
+        width: 82px;
+        background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
+        border-radius: 100vw;
+        z-index: -1;
     }
 }
 
@@ -84,7 +119,6 @@ button {
         .text-and-button {
             width: 90vw;
             height: auto;
-            text-align: center;
             display: flex;
             align-items: center;
             margin: 0;
@@ -110,8 +144,16 @@ button {
     h1 {
         font-size: 70px;
         line-height: 120%;
-        /* 76.8px */
         text-align: center;
+    }
+
+    .dot2 {
+        right: 3vw;
+        top: 3vw;
+        div {
+            height: 60px;
+            width: 60px;
+        }
     }
 }
 

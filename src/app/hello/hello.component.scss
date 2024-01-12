@@ -2,6 +2,20 @@ $primary-color: #FF5959;
 $ending-color-dot: #DE0000;
 $ending-color-page: #FFEAEA;
 
+.d-none {
+    display: none;
+}
+
+h3 {
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    background-color: white;
+    font-family: sans-serif;
+    padding: 10px;
+    border-radius: 8px;
+}
+
 .hello {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,10 @@
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="78. Check button">
+<mask id="mask0_58782_1207" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+<rect id="Bounding box" y="0.626953" width="24" height="24" fill="#797EF3"/>
+</mask>
+<g mask="url(#mask0_58782_1207)">
+<path id="check_box_outline_blank" d="M5 21.627C4.45 21.627 3.97917 21.4311 3.5875 21.0395C3.19583 20.6478 3 20.177 3 19.627V5.62695C3 5.07695 3.19583 4.60612 3.5875 4.21445C3.97917 3.82279 4.45 3.62695 5 3.62695H19C19.55 3.62695 20.0208 3.82279 20.4125 4.21445C20.8042 4.60612 21 5.07695 21 5.62695V19.627C21 20.177 20.8042 20.6478 20.4125 21.0395C20.0208 21.4311 19.55 21.627 19 21.627H5ZM5 19.627H19V5.62695H5V19.627Z" fill="#FF5959"/>
+</g>
+</g>
+</svg>

@@ -3,8 +3,8 @@
 <section class="fontMontserrat">
     <div class="left-side">
         <h2> Got a problem to solve? </h2>
-        <p> Contact me through this form. I am interested in hearing from you. <br> </p>
-        <p> Need a Frontend developer? <br> <b> Contact me </b></p>
+        <p> Contact me through this form. I am interested in hearing from you. <br><br> </p>
+        <p class="red-p"> Need a Frontend developer? <b> Contact me </b></p>
     </div>
 
     <form (submit)="sendMail()" ngNativeValidate #myForm>
@@ -18,7 +18,16 @@
         <textarea class="message-container" placeholder="Your message" type="text" name="message" required
             #messageField></textarea>
 
-        <button (click)="animation()" #button type="submit">Send message </button>
+        <div class="privacy-container">
+            <div class="box-and-note">
+                <img (click)="tickTheBox()" #box [src]="imageUrl">
+                <span> I have read the <a><b> privacy policy</b></a> and agree to the processing of my data as outlined
+                </span>
+            </div>
+            <span #privacyCheck class="d-none"> Please accept the privacy policy </span>
+        </div>
+
+        <button #button type="submit">Send message </button>
     </form>
 
     <div #contactMessage class="message">
@@ -26,5 +35,3 @@
     </div>
 
 </section>
-
-<!--  (submit)="sendMail();" NEEDS TO PE PUT PACK!!! -->

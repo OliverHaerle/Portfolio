@@ -6,6 +6,9 @@ section {
     display: flex;
     align-items: center;
     height: 30vh;
+    width: 100vw;
+    max-width: 100%;
+    position: relative;
 }
 
 .container {
@@ -21,22 +24,35 @@ p {
     font-size: 20px;
 }
 
-// .dot {
-//     position: relative;
-//     left: 500px;
-//     top: 10%;
-//     height: 80px;
-//     width: 80px;
-//     border-radius: 100%;
-//     background: linear-gradient(180deg, $primary-color, 50%, $ending-color-dot);
-// }
+.dot1 {
+    position: absolute;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    left: 5%;
 
-// .dot2 {
-//     position: relative;
-//     left: 1000px;
-//     bottom: 8%;
-//     height: 200px;
-//     width: 200px;
-//     border-radius: 100%;
-//     background: linear-gradient(180deg, $primary-color, 50%, $ending-color-dot);
-// }
+    div {
+        height: 80px;
+        width: 80px;
+        background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
+        border-radius: 100vw;
+        z-index: -1;
+    }
+}
+
+@media(max-width: 850px) {
+    .dot1 {
+        left: 10%;
+        div {
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
+
+@media(max-width: 360px) {
+    h1 {
+        font-size: 65px;
+    }
+}

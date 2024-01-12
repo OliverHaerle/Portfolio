@@ -13,6 +13,7 @@ section {
     min-height: 60vh;
     position: relative;
     overflow-x: hidden;
+    padding-bottom: 32px;
 }
 
 .left-side {
@@ -20,11 +21,10 @@ section {
     margin-right: 10vw;
     display: flex;
     flex-direction: column;
+}
 
-    img {
-        height: 30px;
-        width: 30px;
-    }
+.red-p {
+    color: $primary-color;
 }
 
 form {
@@ -33,6 +33,33 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+}
+
+.box-and-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    img {
+        width: 25px;
+        height: 25px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #ff595938;
+            border-radius: 15px;
+        }
+    }
+
+    a {
+        color: $primary-color;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
 }
 
 .name-container,
@@ -77,6 +104,12 @@ input {
 
 }
 
+.privacy-container {
+    height: 60px;
+    width: 90%;
+    padding-right: 10%;
+}
+
 button {
     display: flex;
     justify-content: center;
@@ -95,23 +128,6 @@ button {
     }
 }
 
-
-
-.check {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-
-    a {
-        color: $primary-color;
-
-        &:hover {
-            text-decoration: underline;
-            cursor: pointer;
-            font-weight: bold;
-        }
-    }
-}
 
 .message {
     position: absolute;
@@ -132,6 +148,14 @@ button {
         box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1490196078);
         padding: 16px;
     }
+}
+
+.d-none {
+    display: none;
+}
+
+.showPrivacyCheck {
+  color: $primary-color;
 }
 
 .flyIn {
