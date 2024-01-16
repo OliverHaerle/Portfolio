@@ -9,6 +9,7 @@ section {
     width: 100vw;
     max-width: 100%;
     position: relative;
+    margin-bottom: 120px;
 }
 
 .container {
@@ -38,49 +39,51 @@ p {
 }
 
 
-// .dot1 {
-//     position: absolute;
-//     width: 95%;
-//     display: flex;
-//     justify-content: center;
-//     top: 0px;
-//     left: 5%;
-
-//     div {
-//         height: 80px;
-//         width: 80px;
-//         background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
-//         border-radius: 100vw;
-//         z-index: -1;
-//     }
-// }
-
 .dot2 {
     position: absolute;
     width: 95%;
     display: flex;
     justify-content: flex-end;
-    top: 3vh;
+    top: 15vh;
     right: 15%;
 
     div {
-        height: 16vh;
-        width: 16vh;
+        height: 18vh;
+        width: 18vh;
         background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
         border-radius: 100vw;
         z-index: -1;
     }
 }
 
-@media(max-width: 850px) {
-    .dot1 {
-        left: 10%;
+@media(max-width: 1220px) {
+    .dot2 {
+        right: 4%;
+    }
+}
+
+@media(max-width: 1060px) {
+    .dot2 {
+        right: 10%;
+        top: 35vh;
+
         div {
-            height: 50px;
-            width: 50px;
+            height: 10vh;
+            width: 10vh;
         }
     }
 }
+
+@media(max-width: 870px) {
+    .dot1 {
+        justify-content: center;
+        div {
+            margin-left: 40%;
+        }
+    }
+}
+
+
 
 @media(max-width: 360px) {
     h1 {

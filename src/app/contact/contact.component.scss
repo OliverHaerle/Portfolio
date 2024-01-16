@@ -21,6 +21,10 @@ section {
     margin-right: 10vw;
     display: flex;
     flex-direction: column;
+
+    h2 {
+        color: $primary-color;
+    }
 }
 
 .red-p {
@@ -62,16 +66,40 @@ form {
     }
 }
 
-.name-container,
-.email-container,
-.message-container {
-    max-width: 800px;
-    width: 90%;
+.textarea-container {
+    position: relative;
+    width: 800px;
+}
+
+
+textarea {
+    resize: both;
+    height: 202px;
+    padding: 15px 25px;
+    gap: 10px;
+    background-image: url('../../assets/img/textarea-icon.svg');
+    background-repeat: no-repeat;
+    background-position: bottom 10px right 10px;
+    background: 0 6.1px 6.1px 0;
+    background-size: 16px;
+}
+
+textarea::-webkit-resizer {
+    display: none;
+}
+
+textarea::-moz-resizer {
+    display: none; 
+}
+
+textarea::-ms-resizer {
+    display: none;
 }
 
 input,
 textarea {
     width: 80%;
+    max-width: 800px;
     border: 1px solid $primary-color;
     border-radius: 8px;
 
@@ -83,17 +111,9 @@ textarea {
     &:focus {
         outline: none;
         border: 1px solid $primary-color;
-        /* Set border style for active state */
     }
 }
 
-textarea {
-    display: flex;
-    height: 202px;
-    padding: 15px 25px;
-    align-items: flex-start;
-    gap: 10px;
-}
 
 input {
     display: flex;
@@ -155,7 +175,7 @@ button {
 }
 
 .showPrivacyCheck {
-  color: $primary-color;
+    color: $primary-color;
 }
 
 .flyIn {
@@ -166,6 +186,26 @@ button {
 .flyOut {
     transform: translateX(200vw);
     transition: transform 0.2s ease-in;
+}
+
+textarea,
+input::-webkit-input-placeholder {
+    font-family: 'Montserrat', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+textarea,
+input:-ms-input-placeholder {
+    font-family: 'Montserrat', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+textarea,
+input:-moz-placeholder {
+    font-family: 'Montserrat', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+textarea,
+input::-moz-placeholder {
+    font-family: 'Montserrat', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
 @media (max-height: 780px) {
