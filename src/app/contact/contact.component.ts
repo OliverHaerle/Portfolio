@@ -3,8 +3,9 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/co
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
+
 export class ContactComponent implements OnInit {
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
@@ -13,15 +14,21 @@ export class ContactComponent implements OnInit {
   @ViewChild('button') button!: ElementRef;
   @ViewChild('contactMessage') contactMessage!: ElementRef;
   @ViewChild('privacyCheck') privacyCheck!: ElementRef;
-  imageUrl: string = "../../assets/img/unchecked.svg";
+  @ViewChild('isRequiredMessage') isRequiredMessage!: ElementRef;
+  imageUrl: string = "../../assets/img/form/unchecked.svg";
+
+  nameFieldModel: string = '';
+  emailFieldModel: string = '';
+  messageModel: string = '';
+  buttonModel: any = '';
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void { }
 
-  check() {
+  checkPrivacyPolicy() {
     let privacyCheck = this.privacyCheck.nativeElement;
-    if (this.imageUrl == "../../assets/img/checked.svg") {
+    if (this.imageUrl == "../../assets/img/form/checked.svg") {
       this.animation();
       this.renderer.addClass(privacyCheck, 'd-none')
     } else {
@@ -31,7 +38,7 @@ export class ContactComponent implements OnInit {
   }
 
   async sendMail() {
-    this.check();
+    this.checkPrivacyPolicy();
 
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
@@ -63,6 +70,7 @@ export class ContactComponent implements OnInit {
     }, 1000);
   }
 
+
   disableButtons(nameField: { disabled: boolean; }, emailField: { disabled: boolean; }, messageField: { disabled: boolean; }, button: { disabled: boolean; }) {
     nameField.disabled = true;
     emailField.disabled = true;
@@ -84,10 +92,10 @@ export class ContactComponent implements OnInit {
   }
 
   tickTheBox() {
-    if (this.imageUrl == "../../assets/img/unchecked.svg") {
-      this.imageUrl = "../../assets/img/checked.svg"
+    if (this.imageUrl == "../../assets/img/form/unchecked.svg") {
+      this.imageUrl = "../../assets/img/form/checked.svg"
     } else {
-      this.imageUrl = "../../assets/img/unchecked.svg"
+      this.imageUrl = "../../assets/img/form/unchecked.svg"
     }
   }
 }

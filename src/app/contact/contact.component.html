@@ -10,14 +10,37 @@
 
     <form (submit)="sendMail()" ngNativeValidate #myForm>
 
-        <input class="name-container" placeholder="Your name" type="text" name="name" required #nameField>
+        <!-- NAME -->
+        <input class="name-field" placeholder="Your name" type="text" name="name" required [(ngModel)]="nameFieldModel"
+            #nameField="ngModel"
+            [ngClass]="{'successful-input': nameFieldModel.length >= 1 && nameField.touched, 'error-input': nameFieldModel.length < 1 && nameField.touched  }">
+
+        <!-- NAME IS REQUIRED MESSAGE -->
+        <div #isRequiredMessage *ngIf="nameFieldModel.length < 1 && nameField.touched"
+            class="error-message fontMontserrat">
+            Your name is required
+        </div>
+
+        <!-- EMAIL -->
+        <input placeholder="Your email" type="email" name="email" required [(ngModel)]="emailFieldModel"
+            #emailField="ngModel"
+            [ngClass]="{'successful-input': emailFieldModel.length >= 1 && emailField.touched, 'error-input': emailFieldModel.length < 1 && emailField.touched  }">
+
+        <!-- EMAIL IS REQUIRED MESSAGE -->
+        <div *ngIf="emailFieldModel.length < 1 && emailField.touched" class="error-message fontMontserrat">
+            Your email is required
+        </div>
 
 
-        <input class="email-container" placeholder="Your email" type="email" name="email" required #emailField>
+        <!-- MESSAGE -->
+        <textarea placeholder="Your message" type="text" name="message" required [(ngModel)]="messageModel"
+            #messageField="ngModel"
+            [ngClass]="{'successful-message-field': messageModel.length >= 1 && messageField.touched, 'error-message-field': messageModel.length < 1 && messageField.touched  }"></textarea>
 
-
-        <textarea class="message-container" placeholder="Your message" type="text" name="message" required
-            #messageField></textarea>
+        <!-- MESSAGE IS EMPTY MESSAGE -->
+        <div *ngIf="messageModel.length < 1 && messageField.touched" class="error-message fontMontserrat">
+            Your message is empty
+        </div>
 
 
         <div class="privacy-container">
@@ -27,9 +50,12 @@
                 </span>
             </div>
             <span #privacyCheck class="d-none"> Please accept the privacy policy </span>
+
         </div>
 
-        <button #button type="submit">Send message </button>
+        <button [(ngModel)]="buttonModel"
+            [ngClass]="{'active-button': nameFieldModel.length >= 1 && emailFieldModel.length >= 1 && messageModel.length >= 1 }"
+            #button type="submit"> Say hello ;) </button>
     </form>
 
     <div #contactMessage class="message">

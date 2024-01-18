@@ -37,11 +37,12 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    position: relative;
 }
 
 .box-and-note {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 8px;
 
@@ -66,18 +67,12 @@ form {
     }
 }
 
-.textarea-container {
-    position: relative;
-    width: 800px;
-}
-
-
 textarea {
     resize: both;
     height: 202px;
     padding: 15px 25px;
     gap: 10px;
-    background-image: url('../../assets/img/textarea-icon.svg');
+    background-image: url('../../assets/img//form/textarea-icon.svg');
     background-repeat: no-repeat;
     background-position: bottom 10px right 10px;
     background: 0 6.1px 6.1px 0;
@@ -89,7 +84,7 @@ textarea::-webkit-resizer {
 }
 
 textarea::-moz-resizer {
-    display: none; 
+    display: none;
 }
 
 textarea::-ms-resizer {
@@ -114,20 +109,65 @@ textarea {
     }
 }
 
-
 input {
     display: flex;
     height: 50px;
     padding: 15px 25px;
     align-items: center;
     gap: 10px;
+}
 
+.error-message {
+    width: 80%;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.name-check-icon {
+    position: absolute;
+    top: 12.5px;
+    right: calc(10% + 12.5px);
+}
+
+.email-check-icon {
+    position: absolute;
+    top: 75px;
+    right: calc(10% + 12.5px);
+}
+
+.error-input,
+.successful-input {
+    background-position: right 12.5px top 12.5px;
+    background-repeat: no-repeat;
+}
+
+.error-input {
+    background-image: url(../../assets/img/form/error.svg);
+}
+
+.successful-input {
+    background-image: url(../../assets/img/form/success.svg);
+}
+
+.error-message-field {
+    background-image: url(../../assets/img/form/error.svg);
+    background-position: right 12.5px top 12.5px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.successful-message-field {
+    background-image: url(../../assets/img/form/success.svg);
+    background-position: right 12.5px top 12.5px;
+    background-repeat: no-repeat;
+    background-size: 25px;
 }
 
 .privacy-container {
     height: 60px;
     width: 90%;
-    padding-right: 10%;
+    padding-left: 5%;
 }
 
 button {
@@ -146,6 +186,11 @@ button {
     &:hover {
         cursor: pointer;
     }
+}
+
+.active-button {
+    color: $primary-color;
+    border-color: $primary-color;
 }
 
 
@@ -176,6 +221,9 @@ button {
 
 .showPrivacyCheck {
     color: $primary-color;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 8px;
 }
 
 .flyIn {
