@@ -15,7 +15,11 @@ export class ContactComponent implements OnInit {
   @ViewChild('contactMessage') contactMessage!: ElementRef;
   @ViewChild('privacyCheck') privacyCheck!: ElementRef;
   @ViewChild('isRequiredMessage') isRequiredMessage!: ElementRef;
-  imageUrl: string = "../../assets/img/form/unchecked.svg";
+  unchecked: string = "../../assets/img/form/unchecked.svg";
+  checked: string = "../../assets/img/form/checked.svg";
+  isChecked: boolean = false;
+  sendingConditionsMet: string = 'nameFieldModel.length >= 1 && emailFieldModel.length >= 1 && messageModel.length >= 1 && isChecked == true'
+
 
   nameFieldModel: string = '';
   emailFieldModel: string = '';
@@ -26,26 +30,16 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  checkPrivacyPolicy() {
-    let privacyCheck = this.privacyCheck.nativeElement;
-    if (this.imageUrl == "../../assets/img/form/checked.svg") {
-      this.animation();
-      this.renderer.addClass(privacyCheck, 'd-none')
-    } else {
-      this.renderer.addClass(privacyCheck, 'showPrivacyCheck')
-      this.renderer.removeClass(privacyCheck, 'd-none')
-    }
-  }
-
   async sendMail() {
-    this.checkPrivacyPolicy();
-
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    let button = this.button.nativeElement;
+    // let button = this.button.nativeElement;
 
-    this.disableButtons(nameField, emailField, messageField, button)
+    nameField.disabled = true;
+    emailField.disabled = true;
+    messageField.disabled = true;
+    // button.disabled = true;
 
     let fd = new FormData();
     fd.append('name', nameField.value)
@@ -58,7 +52,7 @@ export class ContactComponent implements OnInit {
       body: fd
     })
       .catch(error => {
-        console.warn('Fetch Error:', error);
+        console.error('Fetch Error:', error);
       });
 
 
@@ -66,17 +60,17 @@ export class ContactComponent implements OnInit {
       nameField.disabled = false;
       emailField.disabled = false;
       messageField.disabled = false;
-      button.disabled = false;
+      // button.disabled = false;
     }, 1000);
   }
 
 
-  disableButtons(nameField: { disabled: boolean; }, emailField: { disabled: boolean; }, messageField: { disabled: boolean; }, button: { disabled: boolean; }) {
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
-    button.disabled = true;
-  }
+  // disableButtons(nameField: { disabled: boolean; }, emailField: { disabled: boolean; }, messageField: { disabled: boolean; }, button: { disabled: boolean; }) {
+  //   nameField.disabled = true;
+  //   emailField.disabled = true;
+  //   messageField.disabled = true;
+  //   button.disabled = true;
+  // }
 
   animation() {
     let message = this.contactMessage.nativeElement;
@@ -92,11 +86,31 @@ export class ContactComponent implements OnInit {
   }
 
   tickTheBox() {
-    if (this.imageUrl == "../../assets/img/form/unchecked.svg") {
-      this.imageUrl = "../../assets/img/form/checked.svg"
+    if (this.unchecked == "../../assets/img/form/unchecked.svg") {
+      this.unchecked = this.checked
+      this.isChecked = true
     } else {
-      this.imageUrl = "../../assets/img/form/unchecked.svg"
+      this.unchecked = "../../assets/img/form/unchecked.svg"
+      this.isChecked = false
     }
   }
 }
 
+  // checkPrivacyPolicy() {
+  //   let privacyCheck = this.privacyCheck.nativeElement;
+  //   if (this.unchecked == "../../assets/img/form/checked.svg") {
+  //     this.animation();
+  //     this.renderer.addClass(privacyCheck, 'd-none')
+  //   } else {
+  //     this.renderer.addClass(privacyCheck, 'showPrivacyCheck')
+  //     this.renderer.removeClass(privacyCheck, 'd-none')
+  //   }
+  // }
+
+
+  // checkSendingConditions() {
+  //   if (this.button.nativeElement.classList.contains('active-button')) {
+  //     this.sendMail();
+  //     this.animation();
+  //   }
+  // }

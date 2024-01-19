@@ -182,15 +182,15 @@ button {
     color: #BBB;
     font-size: 23px;
     font-weight: 400;
-
-    &:hover {
-        cursor: pointer;
-    }
 }
 
 .active-button {
     color: $primary-color;
     border-color: $primary-color;
+ 
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 
