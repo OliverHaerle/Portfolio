@@ -34,12 +34,12 @@ export class ContactComponent implements OnInit {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    // let button = this.button.nativeElement;
+    let button = this.button.nativeElement;
 
     nameField.disabled = true;
     emailField.disabled = true;
     messageField.disabled = true;
-    // button.disabled = true;
+    button.disabled = true;
 
     let fd = new FormData();
     fd.append('name', nameField.value)
@@ -60,7 +60,7 @@ export class ContactComponent implements OnInit {
       nameField.disabled = false;
       emailField.disabled = false;
       messageField.disabled = false;
-      // button.disabled = false;
+      button.disabled = false;
     }, 1000);
   }
 
