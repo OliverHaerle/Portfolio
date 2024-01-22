@@ -1,9 +1,11 @@
 $primary-color: #FF5959;
+$ending-color-dot: #DE0000;
 
 section {
     height: 61vh;
-    // width: 100vw;
     display: flex;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .img-container {
@@ -41,7 +43,10 @@ h3 {
 }
 
 p {
+    border-radius: 8px;
     margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .button-container {
@@ -72,6 +77,18 @@ p {
         }
     }
 }
+
+.dot1 {
+    position: absolute;
+    height: 50vh;
+    width: 50vh;
+    left: calc(100vw - 25vh);
+    // margin-left: 50vh;
+    background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
+    border-radius: 100vw;
+    z-index: -1;
+}
+
 
 @media (max-height: 750px) {
     img {
@@ -104,6 +121,12 @@ p {
 
     .description {
         width: 40%;
+    }
+
+    .dot1 {
+        width: 30vh;
+        height: 30vh;
+        left: calc(100vw - 15vh);
     }
 }
 
@@ -148,6 +171,13 @@ p {
     }
 }
 
+@media (max-width: 750px) {
+
+    .dot1 {
+        top: -20px;
+    }
+}
+
 @media (max-width: 620px) {
     .img-container {
 
@@ -164,14 +194,14 @@ p {
 }
 
 @media (max-width: 380px) {
-    .description { 
+    .description {
         h3 {
             font-size: 20px;
         }
+
         button {
             width: 130px;
             font-size: 16px;
         }
     }
 }
-
