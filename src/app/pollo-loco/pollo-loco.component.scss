@@ -2,7 +2,7 @@ $primary-color: #FF5959;
 $ending-color-dot: #DE0000;
 
 section {
-    height: 61vh;
+    min-height: 61vh;
     display: flex;
     position: relative;
     overflow-x: hidden;
@@ -94,6 +94,12 @@ p {
     img {
         height: 380px;
     }
+
+    .dot1 {
+        width: 30vh;
+        height: 30vh;
+        left: calc(100vw - 15vh);
+    }
 }
 
 @media (max-width: 1485px) {
@@ -174,7 +180,7 @@ p {
 @media (max-width: 750px) {
 
     .dot1 {
-        top: -20px;
+        // top: -20px;
     }
 }
 

@@ -81,6 +81,16 @@ img {
     }
 }
 
+.dot1 {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 100vw;
+    background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
+    left: 100px;
+    bottom: 50px;
+}
+
 
 @media (max-height: 750px) {
     img {

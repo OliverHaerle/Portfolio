@@ -50,12 +50,11 @@
                 </span>
             </div>
             <span #privacyCheck class="d-none"> Please accept the privacy policy </span>
-
         </div>
 
         <button
             [ngClass]="{'active-button': nameFieldModel.length >= 1 && emailFieldModel.length >= 1 && messageModel.length >= 1 && isChecked }"
-            type="submit"> Say hello ;) </button>
+            type="submit" #button name="button"> Say hello ;) </button>
 
     </form>
 
