@@ -55,7 +55,7 @@ export class ContactComponent implements OnInit {
         console.error('Fetch Error:', error);
       });
 
-
+    this.animation();
     // setTimeout(() => {
     //   nameField.disabled = false;
     //   emailField.disabled = false;
