@@ -89,6 +89,7 @@ img {
     background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
     left: 100px;
     bottom: 50px;
+    z-index: -1;
 }
 
 
@@ -164,6 +165,11 @@ img {
             padding: 0 24px;
             text-align: center;
         }
+    }
+
+    .dot1 {
+        left: 16px;
+        bottom: 220px;
     }
 }
 

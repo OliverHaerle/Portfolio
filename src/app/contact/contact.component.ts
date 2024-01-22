@@ -34,12 +34,6 @@ export class ContactComponent implements OnInit {
     let nameField = this.nameFieldModel;
     let emailField = this.emailFieldModel;
     let messageField = this.messageModel;
-    // let button = this.button.nativeElement;
-
-    // nameField.disabled = true;
-    // emailField.disabled = true;
-    // messageField.disabled = true;
-    // button.disabled = true;
 
     let fd = new FormData();
     fd.append('name', nameField)
@@ -54,14 +48,6 @@ export class ContactComponent implements OnInit {
       .catch(error => {
         console.error('Fetch Error:', error);
       });
-
-    this.animation();
-    // setTimeout(() => {
-    //   nameField.disabled = false;
-    //   emailField.disabled = false;
-    //   messageField.disabled = false;
-    //   // button.disabled = false;
-    // }, 1000);
   }
 
 
@@ -89,28 +75,18 @@ export class ContactComponent implements OnInit {
   }
 }
 
-// checkPrivacyPolicy() {
-//   let privacyCheck = this.privacyCheck.nativeElement;
-//   if (this.unchecked == "../../assets/img/form/checked.svg") {
-//     this.animation();
-//     this.renderer.addClass(privacyCheck, 'd-none')
-//   } else {
-//     this.renderer.addClass(privacyCheck, 'showPrivacyCheck')
-//     this.renderer.removeClass(privacyCheck, 'd-none')
+// try {
+//   let response = await fetch('https://oliverhaerle.at/send_mail/send_mail/send_mail.php', {
+//     method: 'POST',
+//     body: fd,
+//     redirect: 'follow', // This option tells fetch to follow redirects
+//   });
+
+//   if (!response.ok) {
+//     throw new Error(`HTTP error! Status: ${response.status}`);
 //   }
-// }
 
-
-// checkSendingConditions() {
-//   if (this.button.nativeElement.classList.contains('active-button')) {
-//     this.sendMail();
-//     this.animation();
-//   }
-// }
-
-// disableButtons(nameField: { disabled: boolean; }, emailField: { disabled: boolean; }, messageField: { disabled: boolean; }, button: { disabled: boolean; }) {
-//   nameField.disabled = true;
-//   emailField.disabled = true;
-//   messageField.disabled = true;
-//   button.disabled = true;
+//   // Process the successful response...
+// } catch (error) {
+//   console.error('Fetch Error:', error);
 // }
