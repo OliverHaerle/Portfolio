@@ -1,11 +1,8 @@
 * {
     box-sizing: border-box;
     margin: 0;
-}
+    scroll-behavior: smooth;
 
-// something makes the page overflow
-body {
-    // overflow-x: hidden
 }
 
 $primary-color: #FF5959;

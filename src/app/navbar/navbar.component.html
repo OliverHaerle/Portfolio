@@ -1,4 +1,4 @@
-<section (click)="showMenu()">
+<section>
     <img class="logo" src="../../assets/img/icons/white/logo.svg">
 
     <div>
@@ -9,20 +9,20 @@
         </div>
 
         <div class="burger">
-            <img src="../../assets/img/icons/red/burger-menu.svg">
+            <img (click)="showMenu()" src="../../assets/img/icons/red/burger-menu.svg">
         </div>
     </div>
 
     <div id="burger-menu" class="fontMontserrat d-none">
         <div class="burger-menu-bar">
             <img src="../../assets/img/icons/red/logo-red.svg">
-            <img src="../../assets/img/icons/red/burger-menu.svg">
+            <img (click)="showMenu()" src="../../assets/img/icons/red/burger-menu.svg">
         </div>
         <div class="mobile-menu">
-            <a class="primary-color" href="#aboutme">About me</a>
-            <a class="primary-color" href="#skillset">Skill set</a>
-            <a class="primary-color" href="#mywork">My work</a>
-            <a class="primary-color" href="#contact">Contact</a>
+            <a class="primary-color" (click)="showMenuDelayed()" href="#aboutme">About me</a>
+            <a class="primary-color" (click)="showMenuDelayed()" href="#skillset">Skill set</a>
+            <a class="primary-color" (click)="showMenuDelayed()" href="#mywork">My work</a>
+            <a class="primary-color" (click)="showMenuDelayed()" href="#contact">Contact</a>
         </div>
     </div>
 

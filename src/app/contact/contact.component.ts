@@ -40,14 +40,16 @@ export class ContactComponent implements OnInit {
     fd.append('email', emailField)
     fd.append('message', messageField)
 
+    this.animation();
 
-    await fetch('https://oliverhaerle.at/send_mail/send_mail/send_mail.php', {
+    await fetch('https://oliverhaerle.at/send_mail/send_mail.php', {
       method: 'POST',
       body: fd
     })
       .catch(error => {
         console.error('Fetch Error:', error);
       });
+
   }
 
 

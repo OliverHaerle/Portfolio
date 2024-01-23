@@ -16,6 +16,7 @@ section {
 }
 
 img {
+    border-radius: 60px;
     height: 500px;
     transition: all 250ms ease-in-out;
     cursor: pointer;
@@ -23,6 +24,12 @@ img {
     &:hover {
         transform: translate(0, 70px) scale(1.2, 1.2);
     }
+}
+
+.dot2 {
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(135deg, $primary-color, 70%, $ending-color-dot);
 }
 
 .description {
@@ -134,19 +141,7 @@ img {
     .description {
         width: 40%;
     }
-}
 
-@media (max-width: 1160px) {
-    .button-container {
-        button {
-            width: 150px;
-            font-size: 20px;
-        }
-    }
-}
-
-
-@media (max-width: 1040px) {
     section {
         flex-direction: column;
         align-items: center;
@@ -178,7 +173,7 @@ img {
     }
 
     .dot1 {
-        
+
         div {
             height: 35vh;
             width: 35vh;
@@ -186,6 +181,18 @@ img {
     }
 
 }
+
+@media (max-width: 1160px) {
+    .button-container {
+        button {
+            width: 150px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 1040px) {}
 
 @media (max-width: 620px) {
     .img-container {

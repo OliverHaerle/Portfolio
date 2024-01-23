@@ -134,18 +134,7 @@ p {
         height: 30vh;
         left: calc(100vw - 15vh);
     }
-}
 
-@media (max-width: 1160px) {
-    .button-container {
-        button {
-            width: 150px;
-            font-size: 20px;
-        }
-    }
-}
-
-@media (max-width: 1040px) {
     section {
         flex-direction: column;
         align-items: center;
@@ -177,10 +166,12 @@ p {
     }
 }
 
-@media (max-width: 750px) {
-
-    .dot1 {
-        // top: -20px;
+@media (max-width: 1160px) {
+    .button-container {
+        button {
+            width: 150px;
+            font-size: 20px;
+        }
     }
 }
 
