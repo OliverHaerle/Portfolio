@@ -6,6 +6,7 @@
         <p> Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
             projects with my work. <br><br> </p>
         <p class="red-p"> Need a Frontend developer? <b> Contact me </b></p>
+        <div class="dot1"></div>
     </div>
 
     <form (submit)="sendMail()" ngNativeValidate #myForm>
@@ -13,7 +14,7 @@
         <!-- NAME -->
         <input class="name-field" placeholder="Your name" type="text" name="name" required [(ngModel)]="nameFieldModel"
             #nameField="ngModel"
-            [ngClass]="{'successful-input': nameFieldModel.length >= 1 && nameField.touched, 'error-input': nameFieldModel.length < 1 && nameField.touched  }">
+            [ngClass]="{'successful-input': nameFieldModel.length >= 1 , 'error-input': nameFieldModel.length < 1 && nameField.touched  }">
 
         <!-- NAME IS REQUIRED MESSAGE -->
         <div #isRequiredMessage *ngIf="nameFieldModel.length < 1 && nameField.touched"
@@ -24,7 +25,7 @@
         <!-- EMAIL -->
         <input placeholder="Your email" type="email" name="email" required [(ngModel)]="emailFieldModel"
             #emailField="ngModel"
-            [ngClass]="{'successful-input': emailFieldModel.length >= 1 && emailField.touched, 'error-input': emailFieldModel.length < 1 && emailField.touched  }">
+            [ngClass]="{'successful-input': isValidEmail(emailFieldModel) , 'error-input': emailFieldModel.length < 1 && emailField.touched  }">
 
         <!-- EMAIL IS REQUIRED MESSAGE -->
         <div *ngIf="emailFieldModel.length < 1 && emailField.touched" class="error-message fontMontserrat">
@@ -35,7 +36,7 @@
         <!-- MESSAGE -->
         <textarea placeholder="Your message" type="text" name="message" required [(ngModel)]="messageModel"
             #messageField="ngModel"
-            [ngClass]="{'successful-message-field': messageModel.length >= 1 && messageField.touched, 'error-message-field': messageModel.length < 1 && messageField.touched  }"></textarea>
+            [ngClass]="{'successful-message-field': messageModel.length >= 1, 'error-message-field': messageModel.length < 1 && messageField.touched  }"></textarea>
 
         <!-- MESSAGE IS EMPTY MESSAGE -->
         <div *ngIf="messageModel.length < 1 && messageField.touched" class="error-message fontMontserrat">
@@ -56,6 +57,8 @@
             [ngClass]="{'active-button': nameFieldModel.length >= 1 && emailFieldModel.length >= 1 && messageModel.length >= 1 && isChecked }"
             type="submit" #button name="button"> Say hello ;) </button>
 
+        <div class="dot2"></div>
+
     </form>
 
     <div #contactMessage class="message">
@@ -63,7 +66,3 @@
     </div>
 
 </section>
-
-<!-- <button [(ngModel)]="buttonModel" name="button"
-    [ngClass]="{'active-button': nameFieldModel.length >= 1 && emailFieldModel.length >= 1 && messageModel.length >= 1 && isChecked }"
-    #button="ngModel" type="submit"> Say hello ;) </button> -->

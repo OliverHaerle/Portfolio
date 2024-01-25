@@ -66,6 +66,11 @@ export class ContactComponent implements OnInit {
     }, 3000);
   }
 
+  isValidEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
   tickTheBox() {
     if (this.unchecked == "../../assets/img/form/unchecked.svg") {
       this.unchecked = this.checked
@@ -76,19 +81,3 @@ export class ContactComponent implements OnInit {
     }
   }
 }
-
-// try {
-//   let response = await fetch('https://oliverhaerle.at/send_mail/send_mail/send_mail.php', {
-//     method: 'POST',
-//     body: fd,
-//     redirect: 'follow', // This option tells fetch to follow redirects
-//   });
-
-//   if (!response.ok) {
-//     throw new Error(`HTTP error! Status: ${response.status}`);
-//   }
-
-//   // Process the successful response...
-// } catch (error) {
-//   console.error('Fetch Error:', error);
-// }
