@@ -3,7 +3,8 @@
 <section class="fontMontserrat">
     <div class="left-side">
         <h2> Got a problem to solve? </h2> <br><br>
-        <p> Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+        <p> Contact me through this form, I am interested in hearing from you, learning about your ideas and
+            contributing to your
             projects with my work. <br><br> </p>
         <p class="red-p"> Need a Frontend developer? <b> Contact me </b></p>
         <div class="dot1"></div>
@@ -47,7 +48,8 @@
         <div class="privacy-container">
             <div class="box-and-note">
                 <img (click)="tickTheBox()" #box [src]="unchecked">
-                <span> I have read the <a><b> privacy policy</b></a> and agree to the processing of my data as outlined
+                <span> I have read the <a routerLink="/privacypolicy" target="_blank"><b> privacy policy</b></a> and agree to the
+                    processing of my data as outlined
                 </span>
             </div>
             <span #privacyCheck class="d-none"> Please accept the privacy policy </span>
