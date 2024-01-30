@@ -2,8 +2,7 @@ $primary-color: #FF5959;
 $ending-color: #DE0000;
 
 section {
-    height: 61vh;
-    // width: 100vw;
+    height: 65vh;
     display: flex;
     position: relative;
 }
@@ -22,7 +21,7 @@ img {
     cursor: pointer;
 
     &:hover {
-        transform: translate(0, 70px) scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
     }
 }
 

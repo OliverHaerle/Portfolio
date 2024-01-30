@@ -2,10 +2,11 @@ $primary-color: #FF5959;
 $ending-color: #DE0000;
 
 section {
-    min-height: 61vh;
+    min-height: 65vh;
     display: flex;
     position: relative;
     overflow-x: hidden;
+    z-index: 1;
 }
 
 .img-container {
@@ -19,9 +20,10 @@ img {
     height: 500px;
     transition: all 250ms ease-in-out;
     cursor: pointer;
+    z-index: 1;
 
     &:hover {
-        transform: translate(0, -70px) scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
     }
 }
 

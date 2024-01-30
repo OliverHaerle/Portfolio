@@ -50,7 +50,7 @@ h2 {
     z-index: 1;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .profile-pic {
@@ -99,7 +99,6 @@ section {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-top: 13vh;
 
     div {
         width: 60px;
