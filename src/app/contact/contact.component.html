@@ -8,6 +8,7 @@
             projects with my work. <br><br> </p>
         <p class="red-p"> Need a Frontend developer? <b> Contact me </b></p>
         <div class="dot1"></div>
+        <a href="#navbar"><img src="../../assets/img/icons/red/arrow-down-line.svg" alt="arrow-to-top-of-page"></a>
     </div>
 
     <form (submit)="sendMail()" ngNativeValidate #myForm>
@@ -48,7 +49,8 @@
         <div class="privacy-container">
             <div class="box-and-note">
                 <img (click)="tickTheBox()" #box [src]="unchecked">
-                <span> I have read the <a routerLink="/privacypolicy" target="_blank"><b> privacy policy</b></a> and agree to the
+                <span> I have read the <a routerLink="/privacypolicy" target="_blank"><b> privacy policy</b></a> and
+                    agree to the
                     processing of my data as outlined
                 </span>
             </div>
@@ -58,6 +60,10 @@
         <button
             [ngClass]="{'active-button': nameFieldModel.length >= 1 && emailFieldModel.length >= 1 && messageModel.length >= 1 && isChecked }"
             type="submit" #button name="button"> Say hello ;) </button>
+
+        <a class="phone-arrow" href="#navbar"><img src="../../assets/img/icons/red/arrow-down-line.svg"
+                alt="arrow-to-top-of-page"></a>
+
 
         <div class="dot2"></div>
 
