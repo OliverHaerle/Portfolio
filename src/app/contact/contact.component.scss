@@ -97,6 +97,7 @@ form {
 
     a {
         color: $primary-color;
+        text-decoration: none;
 
         &:hover {
             cursor: pointer;
@@ -219,6 +220,7 @@ button {
     color: #BBB;
     font-size: 23px;
     font-weight: 400;
+    cursor: not-allowed;
 }
 
 .active-button {
