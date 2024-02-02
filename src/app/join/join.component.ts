@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class JoinComponent {
 
-  liveLink: string = 'https://oliverhaerle.at/Join/Join/assets/html/page1.html'
+  livelink: string = 'https://oliverhaerle.at/Join/Join/assets/html/page1.html'
 
 }

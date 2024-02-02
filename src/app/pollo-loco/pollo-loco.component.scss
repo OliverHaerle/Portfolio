@@ -2,7 +2,7 @@ $primary-color: #FF5959;
 $ending-color: #DE0000;
 
 section {
-    min-height: 65vh;
+    min-height: 50vh;
     display: flex;
     position: relative;
     overflow-x: hidden;
@@ -14,6 +14,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+a {
+    height: 500px;
 }
 
 img {
@@ -32,6 +36,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 20%;
 }
 
 h2 {
@@ -71,7 +76,7 @@ p {
         overflow: hidden;
         box-shadow: 5px 5px 15px 0px #00000026;
         z-index: 1;
-    
+
         &:before {
             content: '';
             position: absolute;
@@ -83,12 +88,12 @@ p {
             border-radius: 0px;
             z-index: -1;
         }
-    
+
         &:hover {
             color: white;
             transform: scale(1.1, 1.1);
             border: none;
-    
+
             &:before {
                 height: 200%;
                 width: 110%;
@@ -134,33 +139,11 @@ p {
 }
 
 @media (max-width: 1250px) {
-    .img-container {
-        width: 60%;
-
-        img {
-            height: 450px;
-
-            &:hover {
-                transform: translate(0, 30px) scale(1.1, 1.1);
-            }
-        }
-    }
-
-    .description {
-        width: 40%;
-    }
-
-    .dot1 {
-        width: 30vh;
-        height: 30vh;
-        left: calc(100vw - 15vh);
-    }
-
     section {
         flex-direction: column;
         align-items: center;
         height: auto;
-        margin-top: 80px;
+        margin-top: 20px;
     }
 
     .img-container {
@@ -179,10 +162,19 @@ p {
     .description {
         align-items: center;
         width: 100%;
+        max-height: 290px;
 
         p {
             padding: 0 24px;
             text-align: center;
+        }
+    }
+
+    .dot1 {
+
+        div {
+            height: 35vh;
+            width: 35vh;
         }
     }
 }

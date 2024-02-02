@@ -1,3 +1,6 @@
+$primary-color: #FF5959;
+$ending-color: #DE0000;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -142,4 +145,25 @@ $primary-color: #FF5959;
 
 .fontMontserrat {
     font-family: 'Montserrat', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffd1d1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FF5959;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ff8686;
 }
