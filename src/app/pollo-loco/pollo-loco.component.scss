@@ -2,11 +2,12 @@ $primary-color: #FF5959;
 $ending-color: #DE0000;
 
 section {
-    min-height: 50vh;
+    height: 595px;
     display: flex;
     position: relative;
-    overflow-x: hidden;
     z-index: 1;
+    overflow: hidden;
+    padding-bottom: 70px;
 }
 
 .img-container {
@@ -14,10 +15,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-a {
-    height: 500px;
 }
 
 img {
@@ -36,7 +33,6 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 20%;
 }
 
 h2 {
@@ -107,9 +103,9 @@ p {
 
 .dot1 {
     position: absolute;
-    height: 50vh;
-    width: 50vh;
-    left: calc(100vw - 25vh);
+    height: 460px;
+    width: 460px;
+    left: calc(100vw - 230px);
     background: linear-gradient(135deg, $primary-color, 70%, $ending-color);
     border-radius: 100vw;
     z-index: -1;
@@ -119,12 +115,17 @@ p {
 @media (max-height: 750px) {
     img {
         height: 380px;
+        margin-top: 40px;
     }
 
     .dot1 {
         width: 30vh;
         height: 30vh;
         left: calc(100vw - 15vh);
+    }
+
+    section {
+        height: 500px;
     }
 }
 
@@ -143,12 +144,17 @@ p {
         flex-direction: column;
         align-items: center;
         height: auto;
-        margin-top: 20px;
+        margin-bottom: 10vh;
+
     }
 
     .img-container {
         width: 100%;
-        margin-bottom: 5vh;
+
+        a {
+            display: flex;
+            justify-content: center;
+        }
 
         img {
             height: 450px;

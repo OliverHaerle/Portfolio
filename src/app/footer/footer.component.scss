@@ -34,6 +34,16 @@ footer {
 
     p {
         font-size: 16px;
+
+        :hover {
+            text-decoration: underline;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+
+        }
     }
 }
 

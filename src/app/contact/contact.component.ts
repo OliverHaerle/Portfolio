@@ -25,6 +25,7 @@ export class ContactComponent implements OnInit {
   emailFieldModel: string = '';
   messageModel: string = '';
 
+
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void { }
@@ -51,6 +52,15 @@ export class ContactComponent implements OnInit {
       });
 
     this.animation();
+
+    this.clearInput();
+    this.tickTheBox();
+  }
+
+  clearInput() {
+    this.nameFieldModel = '';
+    this.emailFieldModel = '';
+    this.messageModel = '';
   }
 
 
